@@ -14,7 +14,7 @@ class App extends Component {
   }
 
   handleKeyDown(event) {
-      if(event.keyCode !== 39) {
+      if(event.keyCode !== 39 && event.key !== "ArrowRight") {
           return;
       }
     cnt++;
