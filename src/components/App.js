@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import "../styles/App.css";
-let cnt = 0;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,10 +18,10 @@ class App extends Component {
       if(event.keyCode !== 39 && event.key !== "ArrowRight") {
           return;
       }
-    cnt++;
+  
     //console.log(this.state[this.ballPosition[this.left]]);
     //+this.state.ballPosition.left.split("px")[0] + 5 + "px"
-    this.setState({ ballPosition: { left: `${cnt * 5}px` } });
+    this.setState({ ballPosition: { left: Number(this.state.ballPosition.left.slice(0, -2)) + 5 + "px" } });
     this.renderChoice();
   }
   //call back function
