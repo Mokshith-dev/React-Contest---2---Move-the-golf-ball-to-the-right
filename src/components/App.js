@@ -26,7 +26,7 @@ class App extends Component {
   buttonClickHandler() {
     this.setState({ renderBall: true, posi: 1 });
 
-    document.addEventListener("keydown", this.handleKeyDown);
+    //document.addEventListener("keydown", this.handleKeyDown);
   }
   renderChoice() {
     if (this.state.renderBall) {
@@ -41,6 +41,7 @@ class App extends Component {
 
   componentDidMount() {
     this.handleKeyDown = this.handleKeyDown.bind(this);
+    document.addEventListener("keydown", this.handleKeyDown);
   }
 
   render() {
