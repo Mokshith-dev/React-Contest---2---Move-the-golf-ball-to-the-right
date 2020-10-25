@@ -18,11 +18,8 @@ class App extends Component {
       if(event.keyCode !== 39 && event.key !== "ArrowRight") {
           return;
       }
-  
-    //console.log(this.state[this.ballPosition[this.left]]);
-    //+this.state.ballPosition.left.split("px")[0] + 5 + "px"
     this.setState({ ballPosition: { left: Number(this.state.ballPosition.left.slice(0, -2)) + 5 + "px" } });
-    this.renderChoice();
+    //this.renderChoice();
   }
   //call back function
   buttonClickHandler() {
