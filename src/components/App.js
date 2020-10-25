@@ -24,7 +24,7 @@ class App extends Component {
   }
   //call back function
   buttonClickHandler() {
-    this.setState({ renderBall: true });
+    this.setState({ renderBall: true, posi: 1 });
 
     document.addEventListener("keydown", this.handleKeyDown);
   }
