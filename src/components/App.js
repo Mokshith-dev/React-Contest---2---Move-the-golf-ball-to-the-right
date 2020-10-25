@@ -14,6 +14,9 @@ class App extends Component {
   }
 
   handleKeyDown(event) {
+      if(event.keyCode !== 39) {
+          return;
+      }
     cnt++;
     //console.log(this.state[this.ballPosition[this.left]]);
     this.setState({ ballPosition: { left: `${cnt * 5}px` } });
